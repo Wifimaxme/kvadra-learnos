@@ -1,9 +1,19 @@
 <!DOCTYPE html>
+<!-- 
+    PRODUCTION OPTIMIZATION NOTES:
+    - This is a development version using CDN resources
+    - For production, consider:
+      1. Installing Tailwind CSS as PostCSS plugin instead of CDN
+      2. Precompiling Babel scripts instead of using in-browser transformer
+      3. Using React production build instead of development build
+      4. Minifying and bundling all resources
+-->
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adaptiv Education Cycle - AI как второй преподаватель</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -129,13 +139,13 @@
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row gap-4">
-                                    <button onclick="window.location.href='mailto:d.rublevskiy@yadro.com?subject=Запрос презентации Adaptiv Education Cycle&body=Здравствуйте!%0A%0AМеня интересует презентация платформы Adaptiv Education Cycle.%0A%0AПожалуйста, пришлите подробную информацию о возможностях платформы и условиях пилотного проекта.%0A%0AС уважением,'" className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors shadow-lg hover-scale">
+                                    <button onClick={() => window.location.href='mailto:d.rublevskiy@yadro.com?subject=Запрос презентации Adaptiv Education Cycle&body=Здравствуйте!%0A%0AМеня интересует презентация платформы Adaptiv Education Cycle.%0A%0AПожалуйста, пришлите подробную информацию о возможностях платформы и условиях пилотного проекта.%0A%0AС уважением,'"} className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors shadow-lg hover-scale">
                                         Запросить презентацию
                                         <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                         </svg>
                                     </button>
-                                    <button onclick="window.open('https://youtube.com/watch?v=gPiBApn35XY&embeds_referring_euri=https%3A%2F%2Fsquirrelai.com%2F&source_ve_path=Mjg2NjY', '_blank')" className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-xl font-semibold hover:border-blue-600 hover:text-blue-600 transition-colors">
+                                    <button onClick={() => window.open('https://youtube.com/watch?v=gPiBApn35XY&embeds_referring_euri=https%3A%2F%2Fsquirrelai.com%2F&source_ve_path=Mjg2NjY', '_blank')} className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-xl font-semibold hover:border-blue-600 hover:text-blue-600 transition-colors">
                                         <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         </svg>
@@ -762,7 +772,7 @@
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <button onclick="window.location.href='mailto:d.rublevskiy@yadro.com?subject=Запрос презентации Adaptiv Education Cycle&body=Здравствуйте!%0A%0AМеня интересует презентация платформы Adaptiv Education Cycle.%0A%0AПожалуйста, пришлите подробную информацию о возможностях платформы и условиях пилотного проекта.%0A%0AС уважением,'" className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg hover-scale">
+                                <button onClick={() => window.location.href='mailto:d.rublevskiy@yadro.com?subject=Запрос презентации Adaptiv Education Cycle&body=Здравствуйте!%0A%0AМеня интересует презентация платформы Adaptiv Education Cycle.%0A%0AПожалуйста, пришлите подробную информацию о возможностях платформы и условиях пилотного проекта.%0A%0AС уважением,'"} className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg hover-scale">
                                     Запросить презентацию
                                     <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -832,7 +842,7 @@
                                     <a href="#contact" className={`transition-colors ${activeSection === 'contact' ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'}`}>Контакты</a>
                                 </div>
 
-                                <button onclick="window.open('https://youtube.com/watch?v=gPiBApn35XY&embeds_referring_euri=https%3A%2F%2Fsquirrelai.com%2F&source_ve_path=Mjg2NjY', '_blank')" className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors hover-scale">
+                                <button onClick={() => window.open('https://youtube.com/watch?v=gPiBApn35XY&embeds_referring_euri=https%3A%2F%2Fsquirrelai.com%2F&source_ve_path=Mjg2NjY', '_blank')} className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors hover-scale">
                                     Смотреть демо
                                 </button>
                             </div>
@@ -863,8 +873,9 @@
             );
         };
 
-        // Render the app
-        ReactDOM.render(<App />, document.getElementById('root'));
+        // Render the app using React 18 createRoot
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
     </script>
 </body>
 </html>
